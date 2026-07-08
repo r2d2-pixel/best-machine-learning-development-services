@@ -6,12 +6,15 @@ export function getCompanies() {
   return companies;
 }
 
-// Update these keys/labels to match the service categories in your niche
 export const SERVICE_LABELS: Record<string, string> = {
-  'custom-build':   'Custom Build',
-  'consulting':     'Consulting',
-  'integration':    'Integration',
-  'staff-aug':      'Staff Aug',
-  'fixed-price':    'Fixed Price',
-  'dedicated-team': 'Dedicated Team',
+  'custom-ml':           'Custom ML Development',
+  'computer-vision':     'Computer Vision',
+  'nlp':                 'NLP & Text Analytics',
+  'deep-learning':       'Deep Learning',
+  'mlops':               'MLOps & Deployment',
+  'generative-ai':       'Generative AI',
+  'data-engineering':    'Data Engineering',
+  'ml-consulting':       'ML Consulting',
+  'predictive-analytics':'Predictive Analytics',
+  'staff-aug':           'Staff Augmentation',
 };

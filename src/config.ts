@@ -1,42 +1,33 @@
-// ─── SITE CONFIG ───────────────────────────────────────────────────────────
-// To clone this site for a new niche: edit EVERY field in this file,
-// swap out src/data/companies.ts, and you're done.
-// ─────────────────────────────────────────────────────────────────────────────
-
 export const SITE = {
-  name:          'TODO: Site Name',
-  domain:        'TODO: yourdomain.com',
-  url:           'https://TODO.yourdomain.com',
-  tagline:       'TODO: Independent reviews of [Niche]',
-  description:   'TODO: Site meta description for search engines.',
+  name:          'Best Machine Learning Development Services Companies',
+  domain:        'best-machine-learning-development-services.com',
+  url:           'https://best-machine-learning-development-services.com',
+  tagline:       'Independent reviews of machine learning development companies',
+  description:   'Find and compare the best machine learning development services companies. Independent reviews of 38 firms covering pricing, tech stack, and use case fit. Updated July 2026.',
   locale:        'en_US',
-  twitterHandle: '',        // e.g. '@yourhandle' — leave empty to omit OG tag
-  lastReviewed:  'TODO: Month Year',
+  twitterHandle: '',
+  lastReviewed:  'July 2026',
 };
 
 export const NICHE = {
-  label:          'TODO: Niche Label',    // e.g. "AI Agent Development" — used in headings and meta
-  providerLabel:  'company',              // singular: "company" or "agency" or "tool"
-  providersLabel: 'companies',            // plural
-  verticalSlug:   'TODO-niche-slug',      // used in URL slugs, e.g. "ai-agent-development"
+  label:          'Machine Learning Development',
+  providerLabel:  'company',
+  providersLabel: 'companies',
+  verticalSlug:   'machine-learning-development',
 };
 
 export const BRANDING = {
-  primaryColor: '#1e40af',  // tailwind brand-600; update tailwind.config.mjs too
-  logoText:     'TODO: Site Name',
-  logoPath:     '/logos/site-logo.svg',   // place file in public/logos/
+  primaryColor: '#7c3aed',
+  logoText:     'Best Machine Learning Development Services Companies',
+  logoPath:     '/logos/site-logo.svg',
 };
 
-// ─── MONETIZATION ──────────────────────────────────────────────────────────
 export const MONETIZATION = {
   enabled: false,
-  // When enabled=true, companies with monetized:true get rel="sponsored" on outbound links.
-  // Set to false site-wide to strip all sponsored rels (e.g. while testing).
   defaultRel: 'nofollow' as 'sponsored' | 'nofollow' | '',
   disclosurePath: '/affiliate-disclosure',
 };
 
-// ─── NAV ───────────────────────────────────────────────────────────────────
 export const NAV = [
   { label: 'Home',        href: '/' },
   { label: 'Disclosure',  href: '/affiliate-disclosure/' },

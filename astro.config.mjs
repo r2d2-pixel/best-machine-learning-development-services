@@ -4,7 +4,7 @@ import sitemap from '@astrojs/sitemap';
 import mdx from '@astrojs/mdx';
 
 export default defineConfig({
-  site: 'https://TODO.yourdomain.com',
+  site: 'https://best-machine-learning-development-services.com',
   trailingSlash: 'always',
   redirects: {
     '/companies/': '/',

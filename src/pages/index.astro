@@ -359,27 +359,27 @@ const allEngagementModels = [...new Set(companies.flatMap(c => c.engagementModel
           <tbody>
             <tr class="border-b border-slate-100 hover:bg-slate-50">
               <td class="px-4 py-3 font-medium text-slate-800">Fixed project</td>
-              <td class="px-4 py-3 text-slate-600">TODO: Add range</td>
-              <td class="px-4 py-3 text-slate-600">TODO: Add timeline</td>
-              <td class="px-4 py-3 text-slate-600">Well-defined scope, startup or mid-market</td>
+              <td class="px-4 py-3 text-slate-600">$20K–$200K per project</td>
+              <td class="px-4 py-3 text-slate-600">2–6 months</td>
+              <td class="px-4 py-3 text-slate-600">Well-defined ML scope, startup or mid-market</td>
             </tr>
             <tr class="border-b border-slate-100 hover:bg-slate-50 bg-slate-50/50">
               <td class="px-4 py-3 font-medium text-slate-800">Retainer</td>
-              <td class="px-4 py-3 text-slate-600">TODO: Add range</td>
-              <td class="px-4 py-3 text-slate-600">TODO: Add timeline</td>
-              <td class="px-4 py-3 text-slate-600">Ongoing iterative work</td>
+              <td class="px-4 py-3 text-slate-600">$5K–$25K/month</td>
+              <td class="px-4 py-3 text-slate-600">Ongoing</td>
+              <td class="px-4 py-3 text-slate-600">Continuous model iteration and monitoring</td>
             </tr>
             <tr class="border-b border-slate-100 hover:bg-slate-50">
               <td class="px-4 py-3 font-medium text-slate-800">Dedicated team</td>
-              <td class="px-4 py-3 text-slate-600">TODO: Add range</td>
-              <td class="px-4 py-3 text-slate-600">TODO: Add timeline</td>
-              <td class="px-4 py-3 text-slate-600">Large programmes, capability building</td>
+              <td class="px-4 py-3 text-slate-600">$15K–$60K/month</td>
+              <td class="px-4 py-3 text-slate-600">3–12+ months</td>
+              <td class="px-4 py-3 text-slate-600">Large ML programmes, enterprise AI capability build</td>
             </tr>
             <tr class="border-b border-slate-100 hover:bg-slate-50 bg-slate-50/50">
               <td class="px-4 py-3 font-medium text-slate-800">Time and materials</td>
-              <td class="px-4 py-3 text-slate-600">TODO: Add hourly rate</td>
+              <td class="px-4 py-3 text-slate-600">$50–$150/hr (EU/LATAM); $120–$250/hr (US onshore)</td>
               <td class="px-4 py-3 text-slate-600">Variable</td>
-              <td class="px-4 py-3 text-slate-600">Exploratory or undefined-scope work</td>
+              <td class="px-4 py-3 text-slate-600">Exploratory ML research or undefined-scope work</td>
             </tr>
           </tbody>
         </table>
@@ -456,7 +456,7 @@ const allEngagementModels = [...new Set(companies.flatMap(c => c.engagementModel
               <th class="text-center px-3 py-3 font-semibold text-slate-700 whitespace-nowrap">Healthcare</th>
               <th class="text-center px-3 py-3 font-semibold text-slate-700 whitespace-nowrap">Fintech</th>
               <th class="text-center px-3 py-3 font-semibold text-slate-700 whitespace-nowrap">E-commerce</th>
-              <th class="text-center px-3 py-3 font-semibold text-slate-700 whitespace-nowrap">Enterprise</th>
+              <th class="text-center px-3 py-3 font-semibold text-slate-700 whitespace-nowrap">Manufacturing</th>
               <th class="text-center px-3 py-3 font-semibold text-slate-700 whitespace-nowrap">Logistics</th>
             </tr>
           </thead>
@@ -466,7 +466,7 @@ const allEngagementModels = [...new Set(companies.flatMap(c => c.engagementModel
               return (
                 <tr class={`border-b border-slate-100 hover:bg-slate-50 ${i % 2 === 1 ? 'bg-slate-50/40' : ''}`}>
                   <td class="px-4 py-3 font-semibold whitespace-nowrap"><a href={`/companies/${c.slug}/`} class="text-brand-600 hover:underline">{c.name}</a></td>
-                  {[['saas','SaaS'],['health','Healthcare'],['fintech','Fintech'],['commerce','E-commerce'],['financial','Enterprise'],['logistics','Logistics']].map(([key]) => (
+                  {[['saas','SaaS'],['health','Healthcare'],['fintech','Fintech'],['commerce','E-commerce'],['manufactur','Manufacturing'],['logistics','Logistics']].map(([key]) => (
                     <td class={`px-3 py-3 text-center font-semibold ${inInd(key) ? 'text-green-600' : 'text-slate-300'}`}>{inInd(key) ? '✓' : '–'}</td>
                   ))}
                 </tr>
@@ -520,23 +520,23 @@ const allEngagementModels = [...new Set(companies.flatMap(c => c.engagementModel
       <div class="space-y-6">
         <div class="border-b border-slate-100 pb-6">
           <h3 class="font-semibold text-slate-900 mb-2">What is a {NICHE.label} {NICHE.providerLabel}?</h3>
-          <p class="text-sm text-slate-600">TODO: Add a definition of what {NICHE.label} {NICHE.providersLabel} do, their core value proposition, and how they differ from generalist alternatives.</p>
+          <p class="text-sm text-slate-600">A machine learning development company is a specialist technology firm that designs, builds, and deploys production-grade ML systems on behalf of client organisations. Unlike generalist software houses that offer ML as a side practice, dedicated ML firms focus on the full model lifecycle: data engineering and preparation, model selection and training, evaluation and validation, deployment, and post-launch monitoring and iteration. They differ from off-the-shelf AutoML vendors in that they build custom models tailored to proprietary client data and business logic, rather than applying a platform product to a generic use case.</p>
         </div>
         <div class="border-b border-slate-100 pb-6">
           <h3 class="font-semibold text-slate-900 mb-2">How much does {NICHE.label} cost?</h3>
-          <p class="text-sm text-slate-600">TODO: Add pricing context for your niche. Include typical ranges for different engagement models and project types.</p>
+          <p class="text-sm text-slate-600">Machine learning development costs range from $15K for a focused proof-of-concept with an accessible boutique firm to $500K+ for a large enterprise programme with a tier-1 consultancy. A typical fixed-price custom ML project with a mid-tier firm runs $30K–$150K and delivers in 2–4 months. Dedicated team models for ongoing ML work run $15K–$60K per month depending on team size, seniority, and geography. Eastern European and LATAM firms typically deliver at $50–$100/hr for ML engineering, while US-onshore rates run $120–$250/hr. The biggest cost underestimation is ongoing operations: production ML systems require monitoring, retraining pipelines, and model governance infrastructure that can double the initial build cost if not budgeted upfront.</p>
         </div>
         <div class="border-b border-slate-100 pb-6">
           <h3 class="font-semibold text-slate-900 mb-2">How do I choose the right {NICHE.label} {NICHE.providerLabel}?</h3>
-          <p class="text-sm text-slate-600">TODO: Add evaluation criteria specific to your niche. What questions should buyers ask before hiring?</p>
+          <p class="text-sm text-slate-600">Start by confirming whether machine learning is the firm's core business or a recently added practice — the delivery quality gap between dedicated ML firms and generalist software houses is significant. Ask for case studies showing production deployments with named client types (if not names), and ask specifically how they handled model performance degradation after launch. Verify the tech stack matches your environment: an AWS-first firm is less suited to an Azure-first organisation. For regulated industries, check whether the firm has delivered in your sector before. Finally, match the engagement model to your requirement certainty: if the problem is well-defined, a fixed-price project manages risk; if requirements are exploratory, a T&M or retainer model is more appropriate.</p>
         </div>
         <div class="border-b border-slate-100 pb-6">
           <h3 class="font-semibold text-slate-900 mb-2">How long does a typical {NICHE.label} project take?</h3>
-          <p class="text-sm text-slate-600">TODO: Add typical timelines for projects in your niche, broken down by project type or complexity.</p>
+          <p class="text-sm text-slate-600">A focused ML proof-of-concept typically takes 4–8 weeks. A production-ready custom ML system — including data pipeline engineering, model development, integration, testing, and initial deployment — typically takes 3–6 months. More complex projects involving multiple models, MLOps infrastructure setup, or deep enterprise integrations commonly run 6–12 months. Timelines expand when: the training data requires significant cleaning or labelling, the target system has complex integration requirements, the domain is regulated and requires validation documentation, or the model performance doesn't meet production thresholds in early training runs. Clients should budget for a post-launch monitoring and iteration phase of 1–3 months minimum.</p>
         </div>
         <div class="pb-6">
           <h3 class="font-semibold text-slate-900 mb-2">What is the best {NICHE.label} {NICHE.providerLabel} for startups?</h3>
-          <p class="text-sm text-slate-600">TODO: Add startup-specific recommendations. Check the minimum engagement table above and recommend the most accessible {NICHE.providersLabel} for limited budgets.</p>
+          <p class="text-sm text-slate-600">For startups with limited budgets, the most accessible options are Acropolium ($15K minimum), Devox Software ($15K minimum), and Codiant ($15K minimum), all of which offer fixed-price projects for well-defined ML scopes. Blackthorn Vision ($20K minimum) and DataRoot Labs ($20K minimum) are excellent boutique choices that provide direct senior ML engineer access without the overhead of larger firms. Leobit ($20K minimum) is well-suited to startups needing both ML development and product engineering in one team. Avoid enterprise-scale firms (EPAM, Accenture, Cognizant) at startup budget levels — their minimum engagements and overhead costs are not calibrated for early-stage requirements.</p>
         </div>
       </div>
     </section>
