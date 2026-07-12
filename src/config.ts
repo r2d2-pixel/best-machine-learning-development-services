@@ -3,7 +3,7 @@ export const SITE = {
   domain:        'best-machine-learning-development-services.com',
   url:           'https://best-machine-learning-development-services.com',
   tagline:       'Independent reviews of machine learning development companies',
-  description:   'Find and compare the best machine learning development services companies. Independent reviews of 38 firms covering pricing, tech stack, and use case fit. Updated July 2026.',
+  description:   'Find and compare the best machine learning development services companies. Independent reviews of 38 firms covering pricing, tech stack, and use case fit.',
   locale:        'en_US',
   twitterHandle: '',
   lastReviewed:  'July 2026',
