@@ -5,6 +5,7 @@ import JsonLd from '../../components/JsonLd.astro';
 import { companies, getComparisons } from '../../data/companies';
 import type { Company } from '../../data/companies';
 import { SITE, NICHE } from '../../config';
+import { SERVICE_LABELS } from '../../lib/companies';
 
 export function getStaticPaths() {
   return companies.map(c => ({ params: { slug: c.slug }, props: { company: c } }));
@@ -152,14 +153,12 @@ const jsonLd = [
               <thead>
                 <tr class="bg-slate-50 border-b border-slate-200">
                   <th class="text-left px-4 py-3 font-semibold text-slate-700">Service area</th>
-                  <th class="text-left px-4 py-3 font-semibold text-slate-700">Details</th>
                 </tr>
               </thead>
               <tbody>
-                {company.useCases.map((uc, i) => (
+                {company.badges.map((b, i) => (
                   <tr class={`border-b border-slate-100 ${i % 2 === 1 ? 'bg-slate-50/50' : ''}`}>
-                    <td class="px-4 py-3 font-medium text-slate-800">{uc}</td>
-                    <td class="px-4 py-3 text-slate-600">Available for {company.industries.join(', ')} clients</td>
+                    <td class="px-4 py-3 font-medium text-slate-800">{SERVICE_LABELS[b] ?? b}</td>
                   </tr>
                 ))}
               </tbody>
@@ -176,16 +175,12 @@ const jsonLd = [
               <thead>
                 <tr class="bg-slate-50 border-b border-slate-200">
                   <th class="text-left px-4 py-3 font-semibold text-slate-700">Use case</th>
-                  <th class="text-left px-4 py-3 font-semibold text-slate-700">Industries</th>
-                  <th class="text-left px-4 py-3 font-semibold text-slate-700">Approach</th>
                 </tr>
               </thead>
               <tbody>
                 {company.useCases.map((uc, i) => (
                   <tr class={`border-b border-slate-100 ${i % 2 === 1 ? 'bg-slate-50/50' : ''}`}>
-                    <td class="px-4 py-3 font-medium text-slate-800">{uc}</td>
-                    <td class="px-4 py-3 text-slate-600">{company.industries.slice(0, 2).join(', ')}</td>
-                    <td class="px-4 py-3 text-slate-600">{company.techStack.slice(0, 2).join(', ')}</td>
+                    <td class="px-4 py-3 text-slate-700">{uc}</td>
                   </tr>
                 ))}
               </tbody>
